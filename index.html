@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+
+    <!-- Normal Calculator -->
+    <div class="buttons" id="basic">
+      <button data-key="Escape" onclick="clearDisplay()">AC</button>
+      <button data-key="%" onclick="appendValue('%')">%</button>
+      <button data-key="Backspace" onclick="deleteLast()">⌫</button>
+      <button data-key="/" onclick="appendValue('/')">÷</button>
+
+      <button data-key="7" onclick="appendValue('7')">7</button>
+      <button data-key="8" onclick="appendValue('8')">8</button>
+      <button data-key="9" onclick="appendValue('9')">9</button>
+      <button data-key="*" onclick="appendValue('*')">×</button>
+
+      <button data-key="4" onclick="appendValue('4')">4</button>
+      <button data-key="5" onclick="appendValue('5')">5</button>
+      <button data-key="6" onclick="appendValue('6')">6</button>
+      <button data-key="-" onclick="appendValue('-')">−</button>
+
+      <button data-key="1" onclick="appendValue('1')">1</button>
+      <button data-key="2" onclick="appendValue('2')">2</button>
+      <button data-key="3" onclick="appendValue('3')">3</button>
+      <button data-key="+" onclick="appendValue('+')">+</button>
+
+      <button data-key="0" onclick="appendValue('0')">0</button>
+      <button data-key="00" onclick="appendValue('00')">00</button>
+      <button data-key="." onclick="appendValue('.')">.</button>
+      <button class="equal" data-key="Enter" onclick="calculate()">=</button>
+    </div>
+
+    <!-- Scientific Calculator -->
+    <div class="buttons" id="scientific">
+      <button onclick="appendValue('Math.sin(')">sin</button>
+      <button onclick="appendValue('Math.cos(')">cos</button>
+      <button onclick="appendValue('Math.tan(')">tan</button>
+      <button onclick="appendValue('Math.log(')">log</button>
+      <button onclick="appendValue('Math.PI')">π</button>
+      <button onclick="appendValue('Math.E')">e</button>
+      <button onclick="appendValue('!')">!</button>
+      <button onclick="toggleRadDeg()">Rad/Deg</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
